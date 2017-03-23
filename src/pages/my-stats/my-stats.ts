@@ -15,6 +15,7 @@ import { Stat } from '../../models/models';
 export class MyStatsPage {
 
   currentStats: Stat[];
+  prsOnly: boolean = false;
 
   constructor(public navCtrl: NavController, public stats: Stats) {
     this.currentStats = this.stats.query();

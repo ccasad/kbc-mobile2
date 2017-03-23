@@ -10,12 +10,24 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list *ngIf="prsOnly">
     <ion-item-sliding detail-push *ngFor="let stat of currentStats | orderBy: ['name']">
       <button ion-item (click)="openStat(stat)">
-        <h2>{{stat.name}}</h2>
+        <h2 class="prs">{{stat.name}}</h2>
         <p>{{stat.date | date:'MMM d, yyyy'}}</p>
         <ion-note item-right *ngIf="stat.value">{{stat.value}}</ion-note>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list *ngIf="!prsOnly">
+    <ion-list-header>
+      10 Minute Burpees
+    </ion-list-header>
+    <ion-item-sliding detail-push *ngFor="let stat of currentStats | orderBy: ['value']">
+      <button ion-item (click)="openStat(stat)">
+        <h2>{{stat.date | date:'MMM d, yyyy'}}</h2>
+        <ion-note item-right>{{stat.value}}</ion-note>
       </button>
     </ion-item-sliding>
   </ion-list>

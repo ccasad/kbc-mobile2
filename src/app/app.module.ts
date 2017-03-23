@@ -12,6 +12,7 @@ import { OrderByPipe } from '../pipes/pipes';
 import { AccountPage } from '../pages/pages';
 import { AddStatPage } from '../pages/pages';
 import { MyStatsPage } from '../pages/pages';
+import { StatDetailPage } from '../pages/pages';
 import { ToolsPage } from '../pages/pages';
 import { TabsPage } from '../pages/pages';
 
@@ -22,6 +23,7 @@ import { TabsPage } from '../pages/pages';
     AccountPage,
     AddStatPage,
     MyStatsPage,
+    StatDetailPage,
     ToolsPage,
     TabsPage,
     OrderByPipe
@@ -35,6 +37,7 @@ import { TabsPage } from '../pages/pages';
     AccountPage,
     AddStatPage,
     MyStatsPage,
+    StatDetailPage,
     ToolsPage,
     TabsPage
   ],
