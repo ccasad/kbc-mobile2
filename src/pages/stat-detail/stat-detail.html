@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ stat.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="stat-profile" text-center #profilePic [style.background-image]="'url(' + stat.profilePic + ')'">
+  </div>
+
+  <div class="stat-detail" padding>
+    <h2>{{stat.name}}</h2>
+    <p>{{stat.about}}</p>
+  </div>
+</ion-content>

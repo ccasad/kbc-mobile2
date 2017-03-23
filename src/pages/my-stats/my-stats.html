@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Personal Records</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addStat()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding detail-push *ngFor="let stat of currentStats | orderBy: ['name']">
+      <button ion-item (click)="openStat(stat)">
+        <h2>{{stat.name}}</h2>
+        <p>{{stat.date | date:'MMM d, yyyy'}}</p>
+        <ion-note item-right *ngIf="stat.value">{{stat.value}}</ion-note>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
