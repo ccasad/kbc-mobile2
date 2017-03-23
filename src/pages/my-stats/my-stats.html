@@ -1,17 +1,23 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>My Personal Records</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="addStat()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
+    <ion-title>{{pageTitle}}</ion-title>
   </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="listType">
+      <ion-segment-button value="myprs" (click)="pageTitle='My Personal Records'">
+        My PRs
+      </ion-segment-button>
+      <ion-segment-button value="allstats" (click)="pageTitle='All My Stats'">
+        All My Stats
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list *ngIf="prsOnly">
-    <ion-item-sliding detail-push *ngFor="let stat of currentStats | orderBy: ['name']">
+  <ion-list *ngIf="listType==='myprs'">
+    <ion-item-sliding detail-push *ngFor="let stat of prStats | orderBy: ['name']">
       <button ion-item (click)="openStat(stat)">
         <h2 class="prs">{{stat.name}}</h2>
         <p>{{stat.date | date:'MMM d, yyyy'}}</p>
@@ -20,11 +26,11 @@
     </ion-item-sliding>
   </ion-list>
 
-  <ion-list *ngIf="!prsOnly">
+  <ion-list *ngIf="listType==='allstats'">
     <ion-list-header>
       10 Minute Burpees
     </ion-list-header>
-    <ion-item-sliding detail-push *ngFor="let stat of currentStats | orderBy: ['value']">
+    <ion-item-sliding detail-push *ngFor="let stat of allStats | orderBy: ['value']">
       <button ion-item (click)="openStat(stat)">
         <h2>{{stat.date | date:'MMM d, yyyy'}}</h2>
         <ion-note item-right>{{stat.value}}</ion-note>

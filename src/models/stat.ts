@@ -7,14 +7,15 @@ export class Stat {
   requiredYn: string;
   exampleValue: string;
   value: string;
-  date: Date;
+  date: string;
   info: string;
   comment: string;
+  isPr: boolean;
 
   constructor(id: number, name: string, description: string, 
                 formElementId: number, options: string, requiredYn: string,
                 exampleValue: string, value: string, 
-                date: Date, info: string, comment: string) {
+                date: string, info: string, comment: string, isPr: boolean) {
     this.id = id;
     this.name = name;
     this.description = description;
@@ -26,5 +27,6 @@ export class Stat {
     this.date = date;
     this.info = info;
     this.comment = comment;
+    this.isPr = isPr;
   }
 }

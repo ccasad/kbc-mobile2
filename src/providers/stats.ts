@@ -1,8 +1,12 @@
+// core
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+// providers
 import { Api } from './api';
+
+// models
 import { Stat } from '../models/models';
 
 @Injectable()

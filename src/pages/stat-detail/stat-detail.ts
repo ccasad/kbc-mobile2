@@ -1,6 +1,8 @@
+// core
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+// providers
 import { Stats } from '../../providers/providers';
 
 @Component({

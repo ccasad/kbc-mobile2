@@ -1,3 +1,4 @@
+// core
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -13,6 +14,7 @@ import { AccountPage } from '../pages/pages';
 import { AddStatPage } from '../pages/pages';
 import { MyStatsPage } from '../pages/pages';
 import { StatDetailPage } from '../pages/pages';
+import { StatListPage } from '../pages/pages';
 import { ToolsPage } from '../pages/pages';
 import { TabsPage } from '../pages/pages';
 
@@ -24,6 +26,7 @@ import { TabsPage } from '../pages/pages';
     AddStatPage,
     MyStatsPage,
     StatDetailPage,
+    StatListPage,
     ToolsPage,
     TabsPage,
     OrderByPipe
@@ -38,6 +41,7 @@ import { TabsPage } from '../pages/pages';
     AddStatPage,
     MyStatsPage,
     StatDetailPage,
+    StatListPage,
     ToolsPage,
     TabsPage
   ],

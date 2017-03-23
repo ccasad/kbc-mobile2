@@ -1,11 +1,15 @@
+// core
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
 
-import { StatDetailPage } from '../pages';
-
+// providers
 import { Stats } from '../../providers/providers';
+
+// models
 import { Stat } from '../../models/models';
+
+// pages
+import { StatDetailPage } from '../pages';
 
 @Component({
   selector: 'page-my-stats',
@@ -14,11 +18,18 @@ import { Stat } from '../../models/models';
 })
 export class MyStatsPage {
 
-  currentStats: Stat[];
-  prsOnly: boolean = false;
+  allStats: Stat[];
+  prStats: Stat[];
+  listType: string = 'myprs';
+  pageTitle: string = 'My Personal Records';
 
   constructor(public navCtrl: NavController, public stats: Stats) {
-    this.currentStats = this.stats.query();
+    this.allStats = this.stats.query();
+    this.prStats = this.stats.query({'isPr':true});
+  }
+
+  ionViewDidLoad() {
+    
   }
 
   /**

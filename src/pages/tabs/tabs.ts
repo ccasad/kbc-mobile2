@@ -1,5 +1,7 @@
+// core
 import { Component } from '@angular/core';
 
+// pages
 import { MyStatsPage } from '../pages';
 import { AddStatPage } from '../pages';
 import { AccountPage } from '../pages';
