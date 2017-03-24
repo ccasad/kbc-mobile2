@@ -27,14 +27,14 @@
   </ion-list>
 
   <ion-list *ngIf="listType==='allstats'">
-    <ion-list-header>
-      10 Minute Burpees
-    </ion-list-header>
-    <ion-item-sliding detail-push *ngFor="let stat of allStats | orderBy: ['value']">
-      <button ion-item (click)="openStat(stat)">
-        <h2>{{stat.date | date:'MMM d, yyyy'}}</h2>
-        <ion-note item-right>{{stat.value}}</ion-note>
-      </button>
-    </ion-item-sliding>
+    <ion-item-group>
+      <ion-item-divider color="light">10 Minute Burpees</ion-item-divider>
+      <ion-item-sliding detail-push *ngFor="let stat of allStats | orderBy: ['value']">
+        <button ion-item (click)="openStat(stat)">
+          <h2>{{stat.date | date:'MMM d, yyyy'}}</h2>
+          <ion-note item-right>{{stat.value}}</ion-note>
+        </button>
+      </ion-item-sliding>
+    </ion-item-group>
   </ion-list>
 </ion-content>

@@ -26,7 +26,8 @@
 * Allow user to change gender
 
 #### Admin Tools
-
+* Allow to pick a user and see all their Stats
+* Allow to pick a stat and see all the user values (also pick a specific date)
 
 #### Admin Reports
 

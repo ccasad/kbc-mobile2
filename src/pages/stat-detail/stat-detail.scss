@@ -1,14 +1,27 @@
 page-stat-detail {
-  .stat-profile {
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-    height: 250px;
+
+  ion-content.cards-bg {
+    background-color: color($colors, light);
   }
 
-  .stat-detail {
-    width: 100%;
-    background: white;
-    position: absolute;
+  ion-content {
+
+    .stat-value {
+      color: color($colors, primary);
+      font-size: 100px;
+    }
+    .stat-pr {
+      color: gold;
+    }
+
+    ion-card-content {
+      p {
+        margin-bottom: 15px !important;
+      }
+    }
+
+    .high-rated {
+      color: green;
+    }
   }
 }
