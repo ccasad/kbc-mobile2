@@ -19,5 +19,14 @@
 * Layout the stat info
 * Have a view and edit mode
 
+#### Add Stat
+
+
 #### Account 
 * Allow user to change gender
+
+#### Admin Tools
+
+
+#### Admin Reports
+
