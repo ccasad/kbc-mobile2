@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ stat.name }}</ion-title>
+    <ion-title>{{stat.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -17,32 +17,34 @@
 
     <ion-card>
 		  <ion-card-content>
-		  	<h3 *ngIf="stat.isPr">Personal Record!</h3>
-		    <h1 class="stat-value">{{stat.value}} <ion-icon *ngIf="stat.isPr" name="ribbon" class="stat-pr"></ion-icon></h1>
-		    <h4 class="stat-date">Date performed: {{stat.date}}</h4>
+		  	<h3 *ngIf="stat.isPr">Aww yah, it's a <strong>Personal Record</strong>!</h3>
+		    <h1 class="stat-value">{{stat.value}} <ion-icon *ngIf="stat.isPr" name="ribbon" class="stat-pr-lg"></ion-icon></h1>
+		    <h4 class="stat-date">Date performed: {{stat.date | date: 'MMM d, yyyy'}}</h4>
 		    <h4 class="stat-info" *ngIf="stat.info">Additional information: {{stat.info}}</h4>
-		    <h4 class="stat-comment" *ngIf="stat.comment">Bootcamper's comments: {{stat.comment}}</h4>
+		    <h4 class="stat-comment" *ngIf="stat.comment">Comments: {{stat.comment}}</h4>
 		  </ion-card-content>
 		</ion-card>
 
 		<ion-card>
 		  <ion-card-header>
-		    How does this compare?
+		    How does this stat compare?
 		  </ion-card-header>
 		  <ion-card-content>
-		    <p *ngIf="!stat.isPr">Your personal record for <strong>{{stat.name}}</strong> is <strong color="primary">{{stat.value}}</strong>, performed on <strong>{{stat.date}}</strong>.</p>
-		  	<p *ngIf="stat.isPr">This is a personal record <ion-icon name="ribbon" class="stat-pr"></ion-icon> for you for <strong>{{stat.name}}</strong>. Great job!</p>
-		  	<p>Your stat rated in the <strong class="high-rated">top 10%</strong> of all bootcampers for <strong>{{stat.name}}</strong> on <strong>{{stat.date}}</strong>.</p>
-		  	<p>Your stat rated in the <strong class="high-rated">top 30%</strong> of all bootcampers for <strong>{{stat.name}}</strong> all time.</p>
-		  	<p>Your stat rated in the <strong class="high-rated">top 2%</strong> of all <strong>women</strong> bootcampers for <strong>{{stat.name}}</strong> on <strong>{{stat.date}}</strong>.</p>
-		  	<p>Your stat rated in the <strong class="high-rated">top 10%</strong> of all <strong>women</strong> bootcampers for <strong>{{stat.name}}</strong> all time.</p>
+		    <p *ngIf="!stat.isPr">Your personal record for <strong>{{stat.name}}</strong> is <strong color="primary">{{stat.value}}</strong>, performed on <strong>{{stat.date | date: 'MMM d, yyyy'}}</strong>.</p>
+		  	<p *ngIf="stat.isPr">This is a personal record <ion-icon name="ribbon" class="stat-pr-sm"></ion-icon> for you for <strong>{{stat.name}}</strong>. Great job!</p>
+		  	<p>Your stat rated in the <strong class="high-rated">top 2%</strong> of all <strong>women</strong> bootcampers for <strong>{{stat.name}}</strong> on <strong>{{stat.date | date: 'MMM d, yyyy'}}</strong>.</p>
+		  	<p>Your stat rated in the <strong class="high-rated">top 10%</strong> of all <strong>women</strong> bootcampers for <strong>{{stat.name}}</strong> for <strong>all time</strong>.</p>
+		  	<p>Your stat rated in the <strong class="high-rated">top 10%</strong> of all bootcampers for <strong>{{stat.name}}</strong> on <strong>{{stat.date | date: 'MMM d, yyyy'}}</strong>.</p>
+		  	<p>Your stat rated in the <strong class="high-rated">top 30%</strong> of all bootcampers for <strong>{{stat.name}}</strong> for <strong>all time</strong>.</p>
 		  	<p></p>
 		  </ion-card-content>
 		</ion-card>
     
     <ion-card>
-		  <p>A chart of the stat would go here! Maybe allow the user to see the current stat versus 1) their history of this stat, 2) all bootcampers that day, 3) all bootcampers all time, 4) all women that day, 5) all women all time</p>
-		  <p>Allow them to switch between each one. Each time they switch we hit the server to pull the data.</p>
+			<ion-card-content>
+		  	<p>A chart of the stat would go here! Maybe allow the user to see the current stat versus 1) their history of this stat, 2) all bootcampers that day, 3) all bootcampers all time, 4) all women that day, 5) all women all time</p>
+		  	<p>Allow them to switch between each one. Each time they switch we hit the server to pull the data.</p>
+			</ion-card-content>
 		</ion-card>
 
 </ion-content>

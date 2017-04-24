@@ -10,10 +10,13 @@ page-stat-detail {
       color: color($colors, primary);
       font-size: 100px;
     }
-    .stat-pr {
+    .stat-pr-sm {
       color: gold;
     }
-
+    .stat-pr-lg {
+      color: gold;
+      font-size: 85px;
+    }
     ion-card-content {
       p {
         margin-bottom: 15px !important;
