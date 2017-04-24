@@ -5,7 +5,6 @@
 #### Miscellaneous
 * Authentication (login, register, forgot password)
 * Splash screen
-* Color of the app (same green but maybe allow user to pick their color)
 
 #### Providers / API
 * Need test DB up on casad.net
@@ -23,7 +22,11 @@
 
 
 #### Account 
-* Allow user to change gender
+* Create basic form to update name, email and password
+* Allow user to change gender 
+* Allow user to add birthday (show text that reason for bday is to help show how you may compare with others in your age group)
+* Allow user to add profile photo
+* Allow user to choose the color of the app (same green but maybe allow user to pick their color)?
 
 #### Admin Tools
 * Allow to pick a user and see all their Stats
